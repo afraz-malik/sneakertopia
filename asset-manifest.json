@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/snearkertopia/static/css/main.094bd259.chunk.css",
+    "main.js": "/snearkertopia/static/js/main.a967b18f.chunk.js",
+    "main.js.map": "/snearkertopia/static/js/main.a967b18f.chunk.js.map",
+    "runtime-main.js": "/snearkertopia/static/js/runtime-main.a08b341d.js",
+    "runtime-main.js.map": "/snearkertopia/static/js/runtime-main.a08b341d.js.map",
+    "static/js/2.e2e8dd8b.chunk.js": "/snearkertopia/static/js/2.e2e8dd8b.chunk.js",
+    "static/js/2.e2e8dd8b.chunk.js.map": "/snearkertopia/static/js/2.e2e8dd8b.chunk.js.map",
+    "static/js/3.4b483c0e.chunk.js": "/snearkertopia/static/js/3.4b483c0e.chunk.js",
+    "static/js/3.4b483c0e.chunk.js.map": "/snearkertopia/static/js/3.4b483c0e.chunk.js.map",
+    "index.html": "/snearkertopia/index.html",
+    "static/css/main.094bd259.chunk.css.map": "/snearkertopia/static/css/main.094bd259.chunk.css.map",
+    "static/js/2.e2e8dd8b.chunk.js.LICENSE.txt": "/snearkertopia/static/js/2.e2e8dd8b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/snearkertopia/static/media/FuturaMediumCondensedBT.f3e45345.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a08b341d.js",
+    "static/js/2.e2e8dd8b.chunk.js",
+    "static/css/main.094bd259.chunk.css",
+    "static/js/main.a967b18f.chunk.js"
+  ]
+}
