@@ -1,4 +1,10 @@
 @font-face {
   font-family: Futura MdCn BT;
   src: url('./fonts/FuturaMediumCondensedBT.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: Futura BdCn BT;
+  font-weight: bold;
+  src: url('./fonts/FuturaBoldCondensedBT.ttf');
 }
