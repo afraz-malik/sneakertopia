@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import NavBar from '../../components/NavBar/NavBar'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import ProductDetailsCss from './ProductDetails.module.scss'
@@ -223,7 +224,35 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+        <div className={ProductDetailsCss.explore}>
+          <h1>Explore OPTIONS</h1>
+          <div className={ProductDetailsCss.cards}>
+            {[...Array(3)].map((arr) => (
+              <div>
+                <div className={ProductDetailsCss.card}>
+                  <h2>Air Max pegasus 37</h2>
+                  <div className={ProductDetailsCss.img}>
+                    <img alt="" src="images/air-max-90-flyease.png" />
+                    <p>
+                      The Aleali May x women’s Air Jordan 14 Retro Low SP
+                      ‘Fortune’ reunites...
+                    </p>
+                  </div>
+                </div>
+                <div className={ProductDetailsCss.addToCart_price}>
+                  <div className={ProductDetailsCss.addToCart}>
+                    <img alt="" src="images/Basket.svg" />
+                  </div>
+                  <div className={ProductDetailsCss.price}>
+                    <h3>$999</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }
