@@ -30,3 +30,21 @@
     color: #ffffff;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    div {
+      img {
+        width: 250px;
+      }
+    }
+    .social {
+      img {
+        width: 30px;
+      }
+    }
+    .details {
+      width: 65%;
+    }
+  }
+}

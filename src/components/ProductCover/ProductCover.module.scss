@@ -1,0 +1,91 @@
+.productCover {
+  .like {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    img {
+      width: 30px;
+    }
+  }
+  .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 0;
+    img {
+      width: 80%;
+    }
+  }
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+    .prev,
+    .next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        margin: 0;
+        font-family: Futura BdCn BT;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 24px;
+        /* identical to box height */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #131212;
+      }
+    }
+    .slides {
+      width: 60%;
+      ul {
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        list-style-type: none;
+        grid-gap: 10px;
+        padding: 0;
+        margin: 0;
+        // width: 265px;
+        overflow-x: auto;
+        ::-webkit-scrollbar {
+          width: 0;
+          background: transparent; /* Optional: just make scrollbar invisible */
+        }
+        li {
+          border: 1px solid rgba(216, 216, 216, 0.56);
+          box-sizing: border-box;
+          border-radius: 2px;
+          height: 100px;
+          width: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 473px) {
+  .productCover {
+    .prev,
+    .next {
+      display: none !important;
+    }
+    .slides {
+      width: 100% !important;
+    }
+  }
+}
