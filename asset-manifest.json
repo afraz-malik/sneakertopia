@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/sneakertopia/static/css/main.8f3e166d.chunk.css",
-    "main.js": "/sneakertopia/static/js/main.98750a6c.chunk.js",
-    "main.js.map": "/sneakertopia/static/js/main.98750a6c.chunk.js.map",
-    "runtime-main.js": "/sneakertopia/static/js/runtime-main.dbea34d1.js",
-    "runtime-main.js.map": "/sneakertopia/static/js/runtime-main.dbea34d1.js.map",
-    "static/js/2.0337aa12.chunk.js": "/sneakertopia/static/js/2.0337aa12.chunk.js",
-    "static/js/2.0337aa12.chunk.js.map": "/sneakertopia/static/js/2.0337aa12.chunk.js.map",
-    "static/js/3.b522a33f.chunk.js": "/sneakertopia/static/js/3.b522a33f.chunk.js",
-    "static/js/3.b522a33f.chunk.js.map": "/sneakertopia/static/js/3.b522a33f.chunk.js.map",
+    "main.css": "/sneakertopia/static/css/main.af521902.chunk.css",
+    "main.js": "/sneakertopia/static/js/main.916dec03.chunk.js",
+    "main.js.map": "/sneakertopia/static/js/main.916dec03.chunk.js.map",
+    "runtime-main.js": "/sneakertopia/static/js/runtime-main.0b902311.js",
+    "runtime-main.js.map": "/sneakertopia/static/js/runtime-main.0b902311.js.map",
+    "static/js/2.6ffb80de.chunk.js": "/sneakertopia/static/js/2.6ffb80de.chunk.js",
+    "static/js/2.6ffb80de.chunk.js.map": "/sneakertopia/static/js/2.6ffb80de.chunk.js.map",
+    "static/js/3.8bbbb0f0.chunk.js": "/sneakertopia/static/js/3.8bbbb0f0.chunk.js",
+    "static/js/3.8bbbb0f0.chunk.js.map": "/sneakertopia/static/js/3.8bbbb0f0.chunk.js.map",
     "index.html": "/sneakertopia/index.html",
-    "static/css/main.8f3e166d.chunk.css.map": "/sneakertopia/static/css/main.8f3e166d.chunk.css.map",
-    "static/js/2.0337aa12.chunk.js.LICENSE.txt": "/sneakertopia/static/js/2.0337aa12.chunk.js.LICENSE.txt",
+    "static/css/main.af521902.chunk.css.map": "/sneakertopia/static/css/main.af521902.chunk.css.map",
+    "static/js/2.6ffb80de.chunk.js.LICENSE.txt": "/sneakertopia/static/js/2.6ffb80de.chunk.js.LICENSE.txt",
     "static/media/App.css": "/sneakertopia/static/media/FuturaMediumCondensedBT.f3e45345.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.dbea34d1.js",
-    "static/js/2.0337aa12.chunk.js",
-    "static/css/main.8f3e166d.chunk.css",
-    "static/js/main.98750a6c.chunk.js"
+    "static/js/runtime-main.0b902311.js",
+    "static/js/2.6ffb80de.chunk.js",
+    "static/css/main.af521902.chunk.css",
+    "static/js/main.916dec03.chunk.js"
   ]
 }
