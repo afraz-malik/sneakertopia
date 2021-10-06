@@ -1,11 +1,13 @@
 import React from 'react'
 import Card from '../../components/Card/Card'
+import Comments from '../../components/Comments/Comments'
 import ExploreMore from '../../components/ExploreMore/ExploreMore'
 import Footer from '../../components/Footer/Footer'
 import NavBar from '../../components/NavBar/NavBar'
 import ProductCover from '../../components/ProductCover/ProductCover'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import ProductDetailsCss from './ProductDetails.module.scss'
+
 const ProductDetails = () => {
   return (
     <div className={ProductDetailsCss.container}>
@@ -41,27 +43,7 @@ const ProductDetails = () => {
                 </p>
               </div>
             </Card>
-            <Card title="Comments">
-              <div className={ProductDetailsCss.comments}>
-                <textarea placeholder="Add coments here" rows="10" cols="50" />
-                {[...Array(2)].map((arr) => (
-                  <div className={ProductDetailsCss.comment}>
-                    <img alt="" src="images/Mask Group.svg" />
-                    <div className={ProductDetailsCss.text}>
-                      <p>
-                        {' '}
-                        This is probably one of the best shoes i’ve seen, i
-                        definetly recommend it to everyone!
-                      </p>
-                      <p className={ProductDetailsCss.date}>
-                        <span>Today at 12:05 PM by</span> &ensp;
-                        <span>Dorothy Parker</span>
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Card>
+            <Comments />
           </div>
           <div className={ProductDetailsCss.col37}>
             <div className={ProductDetailsCss.secondCover}>
@@ -93,8 +75,10 @@ const ProductDetails = () => {
                   <div className={ProductDetailsCss.col100}>
                     <h3>Sizes</h3>
                     <div className={ProductDetailsCss.boxes}>
-                      {[...Array(7)].map((arr, j) => (
-                        <div className={ProductDetailsCss.span}>{j + 1}</div>
+                      {[...Array(7)].map((arr, idx) => (
+                        <div className={ProductDetailsCss.span} key={idx}>
+                          {idx + 1}
+                        </div>
                       ))}
                     </div>
                   </div>

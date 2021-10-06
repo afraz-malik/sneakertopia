@@ -1,7 +1,47 @@
 import React from 'react'
 import NavBarCss from './NavBar.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
+
 const NavBar = () => {
+  // USE EFFECT to handle Navbar
+  React.useEffect(() => {
+    if (document.documentElement.clientWidth < 500) {
+      setstate(false)
+      window.addEventListener('mouseup', clickEvent)
+    }
+    window.addEventListener('resize', resizeEvent)
+    return () => {
+      window.removeEventListener('mouseup', clickEvent)
+      window.removeEventListener('resize', resizeEvent)
+    }
+    // eslint-disable-next-line
+  }, [])
+  const [state, setstate] = React.useState(true)
+  // toggle in mobile view
+  const toggle = () => {
+    setstate(!state)
+  }
+  // This will move navbar to bars in mobile view <i>
+  const resizeEvent = () => {
+    const scrolled = document.documentElement.clientWidth
+    if (scrolled > 500) {
+      window.removeEventListener('mouseup', clickEvent)
+      setstate(true)
+    } else if (scrolled <= 500) {
+      window.addEventListener('mouseup', clickEvent)
+      setstate(false)
+    }
+  }
+  // this will hide menu in mobile view
+  const clickEvent = (e) => {
+    var container = document.getElementById('ul')
+    if (!container.contains(e.target)) {
+      if (document.documentElement.clientWidth < 500) {
+        setstate(false)
+      }
+    }
+  }
+
   return (
     <div className={NavBarCss.container}>
       <div className={NavBarCss.left}>
@@ -10,8 +50,15 @@ const NavBar = () => {
         </Link>
       </div>
       <div className={NavBarCss.center}>
-        <i class="fa fa-bars"></i>
-        <ul>
+        <i
+          className="fa fa-bars"
+          onClick={() => toggle()}
+          style={{
+            transform: state ? 'rotate(-90deg)' : 'unset',
+            display: !state ? 'flex' : null,
+          }}
+        ></i>
+        <ul style={{ display: state ? 'flex' : 'none' }} id="ul">
           <li>
             <Link to="/details">CATEGORIES</Link>
           </li>
@@ -36,4 +83,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default withRouter(NavBar)

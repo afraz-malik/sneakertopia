@@ -38,57 +38,6 @@
           }
         }
       }
-      .comments {
-        display: flex;
-        flex-direction: column;
-        grid-gap: 20px;
-        justify-content: space-between;
-        textarea {
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-          box-shadow: 0px 1px 2px rgba(31, 41, 55, 0.08);
-          border-radius: 4px;
-          outline: 1px solid lightgrey;
-          border: none;
-          ::placeholder {
-            font-family: Inter;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 19px;
-            line-height: 20px;
-            color: #374151;
-          }
-        }
-        .comment {
-          display: flex;
-          grid-gap: 15px;
-          justify-content: flex-start;
-          align-items: flex-start;
-          width: 95%;
-          margin: 20px 0;
-          img {
-            width: 40px;
-          }
-          .text {
-            p {
-              line-height: 18px;
-            }
-            .date {
-              font-size: 12px;
-
-              // line-height: 15x;
-            }
-            span {
-              opacity: 0.8;
-              :nth-child(2) {
-                color: #374151;
-                opacity: 1;
-                background-color: pink;
-              }
-            }
-          }
-        }
-      }
       .details {
         display: flex;
         flex-direction: column;

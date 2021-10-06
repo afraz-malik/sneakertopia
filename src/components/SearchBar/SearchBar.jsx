@@ -1,6 +1,8 @@
 import React from 'react'
 import SearchBarCss from './SearchBar.module.scss'
-const countryList = [
+
+// Dummy Categgory List
+const categoryList = [
   'Running',
   'Walking',
   'Sport',
@@ -16,19 +18,28 @@ const countryList = [
 ]
 
 const SearchBar = () => {
-  const [state, setstate] = React.useState('All categories')
+  const [state, setstate] = React.useState({
+    search: '',
+    caterogy: 'All Categories',
+  })
   const [toggle, settoggle] = React.useState(false)
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  // }
+  const handleChange = (e) => {
+    setstate({ ...state, [e.target.name]: e.target.value })
+  }
 
+  // Get value of Search and Category
+  const handleSubmit = () => {
+    console.log(state)
+  }
   return (
     <div className={SearchBarCss.container}>
       <div className={SearchBarCss.input}>
-        <input type="text" placeholder="Search sneaker name" />
+        <input
+          type="text"
+          placeholder="Search sneaker name"
+          name="search"
+          onChange={handleChange}
+        />
         <img alt="" src="images/Search icon.png" />
       </div>
       <div className={SearchBarCss.box}>
@@ -36,7 +47,7 @@ const SearchBar = () => {
           className={SearchBarCss.dropdown}
           onClick={() => settoggle(!toggle)}
         >
-          <h3>{state}</h3>
+          <h3>{state.caterogy}</h3>
           <img alt="" src="images/Caret.png" />
         </div>
         <div
@@ -44,11 +55,11 @@ const SearchBar = () => {
           style={toggle ? { display: 'block' } : { display: 'none' }}
         >
           <ul>
-            {countryList.map((cl, j) => (
+            {categoryList.map((cl, j) => (
               <li
                 key={j}
                 onClick={() => {
-                  setstate(cl)
+                  setstate({ ...state, caterogy: cl })
                   settoggle(false)
                 }}
                 className={state === cl ? SearchBarCss.active : null}
@@ -59,7 +70,7 @@ const SearchBar = () => {
           </ul>
         </div>
       </div>
-      <button>SEARCH</button>{' '}
+      <button onClick={() => handleSubmit()}>SEARCH</button>
     </div>
   )
 }

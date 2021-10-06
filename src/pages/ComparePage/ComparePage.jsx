@@ -14,6 +14,8 @@ const ComparePage = () => {
     }
     // eslint-disable-next-line
   }, [])
+
+  // Reduce Compare to TWO products on mobile view for REsponsiveness
   const resizeEvent = () => {
     const cwidth = document.documentElement.clientWidth
     if (cwidth > 600) {
@@ -28,7 +30,7 @@ const ComparePage = () => {
       <div className={ComparePageCss.body}>
         <SearchBar />
         <div className={ComparePageCss.cards}>
-          {[...Array(state)].map((arr) => (
+          {[...Array(state)].map((arr, idx) => (
             <div className={ComparePageCss.card}>
               <div className={ComparePageCss.img}>
                 <img alt="" src="images/air-max-90-flyease.png" />
