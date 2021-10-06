@@ -1,12 +1,63 @@
 import React from 'react'
 import Card from '../../components/Card/Card'
-import Comments from '../../components/Comments/Comments'
+import CommentsBox from '../../components/CommentsBox/CommentsBox'
 import ExploreMore from '../../components/ExploreMore/ExploreMore'
 import Footer from '../../components/Footer/Footer'
 import NavBar from '../../components/NavBar/NavBar'
 import ProductCover from '../../components/ProductCover/ProductCover'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import ProductDetailsCss from './ProductDetails.module.scss'
+// Dummy product api
+const productApi = {
+  id: 1,
+  title: 'Nike AIR',
+  price: '99.5',
+  model: 'Air Jordan',
+  release_date: '2021-08-20',
+  sku: 'DJ1034 200',
+  upper_material: 'Tan',
+  score: '4.3',
+  sizes: [8, 9, 10, 11, 12, 13, 14, 15],
+  colors: ['pink', 'red', 'green', 'black'],
+  images: [
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+    'images/air-max-90-flyease.png',
+  ],
+  detail:
+    'The Aleali May x women’s Air Jordan 14 Retro Low SP ‘Fortune’ reunites Jordan Brand with the LA-based model and stylist for a fifth collaboration. Inspired by May’s personal heritage and cultural experiences, the low-top is treated to a luxe makeover, highlighted by a tan suede upper with contrasting hits of black on the collar and tongue.',
+  designer: {
+    name: 'Tinker Haterfield',
+    image: 'images/Mask Group.svg',
+    detail:
+      'Hatfield was the lead designer of Air Jordans III through XV, XX, and XX3. Additionally, Hatfield co-designed Air Jordans 2010 and XXX. Phil Knight credits the Air Jordan III with saving Nike.',
+  },
+  comments: [
+    {
+      id: 1,
+      name: 'Dorothy Parker',
+      img: 'images/Mask Group.svg',
+      date: 'Today at 12:05',
+      comment:
+        'This is probably one of the best shoes i’ve seen, i definetly recommend it to everyone!',
+    },
+    {
+      id: 2,
+      name: 'Dorothy Parker',
+      img: 'images/Mask Group.svg',
+      date: 'Today at 12:05',
+      comment:
+        'This is probably one of the best shoes i’ve seen, i definetly recommend it to everyone!',
+    },
+  ],
+}
 
 const ProductDetails = () => {
   return (
@@ -17,67 +68,55 @@ const ProductDetails = () => {
         <div className={ProductDetailsCss.cards}>
           <div className={ProductDetailsCss.col60}>
             <div className={ProductDetailsCss.firstCover}>
-              <ProductCover />
+              <ProductCover images={productApi.images} />
             </div>
             <Card title="Product designer">
-              <p>
-                The Aleali May x women’s Air Jordan 14 Retro Low SP ‘Fortune’
-                reunites Jordan Brand with the LA-based model and stylist for a
-                fifth collaboration. Inspired by May’s personal heritage and
-                cultural experiences, the low-top is treated to a luxe makeover,
-                highlighted by a tan suede upper with contrasting hits of black
-                on the collar and tongue.
-              </p>
+              <p>{productApi.detail}</p>
             </Card>
             <Card title="About The Designer">
               <div className={ProductDetailsCss.aboutDesigner}>
                 <div className={ProductDetailsCss.imgbox}>
-                  <img alt="" src="images/Mask Group.svg" />
-                  <h3>Tinker Haterfield</h3>
+                  <img alt="" src={productApi.designer.image} />
+                  <h3>{productApi.designer.name}</h3>
                 </div>
-                <p>
-                  Hatfield was the lead designer of Air Jordans III through XV,
-                  XX, and XX3. Additionally, Hatfield co-designed Air Jordans
-                  2010 and XXX. Phil Knight credits the Air Jordan III with
-                  saving Nike.
-                </p>
+                <p>{productApi.designer.detail}</p>
               </div>
             </Card>
-            <Comments />
+            <CommentsBox comments={productApi.comments} />
           </div>
           <div className={ProductDetailsCss.col37}>
             <div className={ProductDetailsCss.secondCover}>
-              <ProductCover />
+              <ProductCover images={productApi.images} />
             </div>
             <Card title="Nike Air">
               <div className={ProductDetailsCss.details}>
                 <div className={ProductDetailsCss.row}>
                   <div className={ProductDetailsCss.col}>
                     <h3>MODEL</h3>
-                    <p> Air Jordan</p>
+                    <p>{productApi.model}</p>
                   </div>
                   <div className={ProductDetailsCss.col}>
                     <h3>Release date</h3>
-                    <p>2021-08-20</p>
+                    <p>{productApi.release_date}</p>
                   </div>
                 </div>
                 <div className={ProductDetailsCss.row}>
                   <div className={ProductDetailsCss.col}>
                     <h3>SKU</h3>
-                    <p> DJ1034 200</p>
+                    <p>{productApi.sku}</p>
                   </div>
                   <div className={ProductDetailsCss.col}>
                     <h3>Upper material</h3>
-                    <p>Tan</p>
+                    <p>{productApi.upper_material}</p>
                   </div>
                 </div>
                 <div className={ProductDetailsCss.row}>
                   <div className={ProductDetailsCss.col100}>
                     <h3>Sizes</h3>
                     <div className={ProductDetailsCss.boxes}>
-                      {[...Array(7)].map((arr, idx) => (
-                        <div className={ProductDetailsCss.span} key={idx}>
-                          {idx + 1}
+                      {productApi.sizes.map((size, idx) => (
+                        <div className={ProductDetailsCss.span} key={size}>
+                          {size}
                         </div>
                       ))}
                     </div>
@@ -87,10 +126,11 @@ const ProductDetails = () => {
                   <div className={ProductDetailsCss.col100}>
                     <h3>Color</h3>
                     <div className={ProductDetailsCss.boxes}>
-                      <div className={ProductDetailsCss.span}>PINK</div>
-                      <div className={ProductDetailsCss.span}>RED</div>
-                      <div className={ProductDetailsCss.span}>GREEN</div>
-                      <div className={ProductDetailsCss.span}>BLACK</div>
+                      {productApi.colors.map((color, idx) => (
+                        <div className={ProductDetailsCss.span} key={color}>
+                          {color}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -104,7 +144,7 @@ const ProductDetails = () => {
                     <img alt="" src="images/image 4.png" />
                   </div>
                   <div className={ProductDetailsCss.right}>
-                    <h4>$99.5</h4>
+                    <h4>${productApi.price}</h4>
                     <div className={ProductDetailsCss.cart}>
                       <img alt="" src="images/sale 1.svg" />
                     </div>
@@ -119,7 +159,7 @@ const ProductDetails = () => {
                     <img alt="" src="images/image 5.png" />
                   </div>
                   <div className={ProductDetailsCss.right}>
-                    <h4>$99.5</h4>
+                    <h4>${productApi.price}</h4>
                     <div className={ProductDetailsCss.cart}>
                       <img alt="" src="images/sale 1.svg" />
                     </div>
@@ -131,7 +171,7 @@ const ProductDetails = () => {
                     <img alt="" src="images/image 6.png" />
                   </div>
                   <div className={ProductDetailsCss.right}>
-                    <h4>$99.5</h4>
+                    <h4>${productApi.price}</h4>
                     <div className={ProductDetailsCss.cart}>
                       <img alt="" src="images/sale 1.svg" />
                     </div>
@@ -143,7 +183,7 @@ const ProductDetails = () => {
                     <img alt="" src="images/image 7.png" />
                   </div>
                   <div className={ProductDetailsCss.right}>
-                    <h4>$99.5</h4>
+                    <h4>${productApi.price}</h4>
                     <div className={ProductDetailsCss.cart}>
                       <img alt="" src="images/sale 1.svg" />
                     </div>

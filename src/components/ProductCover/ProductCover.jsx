@@ -1,9 +1,10 @@
 import React from 'react'
 import Card from '../Card/Card'
 import ProductCoverCss from './ProductCover.module.scss'
-const ProductCover = () => {
-  const [source, setsource] = React.useState('images/air-max-90-flyease.png')
 
+// Getting all images from Product API in Product Details Page
+const ProductCover = ({ images }) => {
+  const [source, setsource] = React.useState(images[0])
   // Taking slider to slide upon click
   var y = document.getElementsByClassName('slide')
   const scrollLeft = () => {
@@ -33,11 +34,11 @@ const ProductCover = () => {
           </div>
           <div className={ProductCoverCss.slides}>
             <ul className="slide">
-              {[...Array(10)].map((arr, idx) => (
+              {images.map((image, idx) => (
                 <li key={idx}>
                   <img
                     alt=""
-                    src={'images/air-max-90-flyease.png'}
+                    src={image}
                     onClick={(e) => setsource(e.target.src)}
                   />
                 </li>

@@ -1,24 +1,12 @@
 import React, { useState } from 'react'
 import Card from '../Card/Card'
-import CommentsCss from './Comments.module.scss'
+import CommentsBoxCss from './CommentsBox.module.scss'
 import $ from 'jquery'
 
-// Dummy Comments Array Getting from BAckend
-const commentsArray = [
-  {
-    id: 1,
-    name: 'Dorothy Parker',
-    img: 'images/Mask Group.svg',
-    date: 'Today at 12:05',
-    comment:
-      'This is probably one of the best shoes i’ve seen, i definetly recommend it to everyone!',
-  },
-]
-
-const Comments = () => {
-  const [state, setstate] = useState(commentsArray)
+// Getting All comments from Product API from Product Details Page
+const CommentsBox = ({ comments }) => {
+  const [state, setstate] = useState(comments)
   const [comment, setcomment] = useState('')
-
   // Pressing Enter will add comment in state
   $('#comment').keypress(function (e) {
     if (e.which === 13 && !e.shiftKey) {
@@ -40,7 +28,7 @@ const Comments = () => {
 
   return (
     <Card title="Comments">
-      <div className={CommentsCss.comments}>
+      <div className={CommentsBoxCss.comments}>
         <textarea
           placeholder="Add comments here ( Press Enter to Submit )"
           rows="6"
@@ -50,11 +38,11 @@ const Comments = () => {
           onChange={(e) => setcomment(e.target.value)}
         />
         {state.map((el, idx) => (
-          <div className={CommentsCss.comment} key={idx}>
+          <div className={CommentsBoxCss.comment} key={idx}>
             <img alt="" src={el.img} />
-            <div className={CommentsCss.text}>
+            <div className={CommentsBoxCss.text}>
               <p>{el.comment}</p>
-              <p className={CommentsCss.date}>
+              <p className={CommentsBoxCss.date}>
                 <span>{el.date} by</span> &ensp;
                 <span>{el.name}</span>
               </p>
@@ -66,4 +54,4 @@ const Comments = () => {
   )
 }
 
-export default Comments
+export default CommentsBox
