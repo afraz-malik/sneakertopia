@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 import SearchBarCss from './SearchBar.module.scss'
 
 // Dummy Categgory List
@@ -18,6 +19,7 @@ const categoryList = [
 ]
 
 const SearchBar = () => {
+  const history = useHistory()
   const [state, setstate] = React.useState({
     search: '',
     caterogy: 'All Categories',
@@ -30,6 +32,7 @@ const SearchBar = () => {
   // Get value of Search and Category
   const handleSubmit = () => {
     console.log(state)
+    history.push('/search')
   }
   return (
     <div className={SearchBarCss.container}>
