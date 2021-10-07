@@ -16,11 +16,9 @@ const NavBar = () => {
     }
     // eslint-disable-next-line
   }, [])
-  const [state, setstate] = React.useState(true)
-  // toggle in mobile view
-  const toggle = () => {
-    setstate(!state)
-  }
+  const [state, setstate] = React.useState(
+    document.documentElement.clientWidth < 500 ? false : true
+  )
   // This will move navbar to bars in mobile view <i>
   const resizeEvent = () => {
     const scrolled = document.documentElement.clientWidth
@@ -32,6 +30,7 @@ const NavBar = () => {
       setstate(false)
     }
   }
+  console.log(state)
   // this will hide menu in mobile view
   const clickEvent = (e) => {
     var container = document.getElementById('ul')
@@ -49,16 +48,16 @@ const NavBar = () => {
           <img alt="" src="images/image 1.svg" />
         </Link>
       </div>
-      <div className={NavBarCss.center}>
+      <div className={NavBarCss.center} id="ul">
         <i
           className="fa fa-bars"
-          onClick={() => toggle()}
+          onClick={() => setstate(!state)}
           style={{
             transform: state ? 'rotate(-90deg)' : 'unset',
             display: !state ? 'flex' : null,
           }}
         ></i>
-        <ul style={{ display: state ? 'flex' : 'none' }} id="ul">
+        <ul style={{ display: state ? 'flex' : 'none' }}>
           <li>
             <Link to="/details">CATEGORIES</Link>
           </li>
