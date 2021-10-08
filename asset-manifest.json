@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/sneakertopia/static/css/main.e47b0713.chunk.css",
-    "main.js": "/sneakertopia/static/js/main.18c78ae5.chunk.js",
-    "main.js.map": "/sneakertopia/static/js/main.18c78ae5.chunk.js.map",
-    "runtime-main.js": "/sneakertopia/static/js/runtime-main.60a23d5e.js",
-    "runtime-main.js.map": "/sneakertopia/static/js/runtime-main.60a23d5e.js.map",
+    "main.css": "/sneakertopia/static/css/main.fc0aee22.chunk.css",
+    "main.js": "/sneakertopia/static/js/main.6a004bfa.chunk.js",
+    "main.js.map": "/sneakertopia/static/js/main.6a004bfa.chunk.js.map",
+    "runtime-main.js": "/sneakertopia/static/js/runtime-main.bedb0cc1.js",
+    "runtime-main.js.map": "/sneakertopia/static/js/runtime-main.bedb0cc1.js.map",
     "static/css/2.6071a35b.chunk.css": "/sneakertopia/static/css/2.6071a35b.chunk.css",
-    "static/js/2.3e4affee.chunk.js": "/sneakertopia/static/js/2.3e4affee.chunk.js",
-    "static/js/2.3e4affee.chunk.js.map": "/sneakertopia/static/js/2.3e4affee.chunk.js.map",
-    "static/js/3.112c7c6a.chunk.js": "/sneakertopia/static/js/3.112c7c6a.chunk.js",
-    "static/js/3.112c7c6a.chunk.js.map": "/sneakertopia/static/js/3.112c7c6a.chunk.js.map",
+    "static/js/2.e06a72f3.chunk.js": "/sneakertopia/static/js/2.e06a72f3.chunk.js",
+    "static/js/2.e06a72f3.chunk.js.map": "/sneakertopia/static/js/2.e06a72f3.chunk.js.map",
+    "static/js/3.2c4fafcc.chunk.js": "/sneakertopia/static/js/3.2c4fafcc.chunk.js",
+    "static/js/3.2c4fafcc.chunk.js.map": "/sneakertopia/static/js/3.2c4fafcc.chunk.js.map",
     "index.html": "/sneakertopia/index.html",
     "static/css/2.6071a35b.chunk.css.map": "/sneakertopia/static/css/2.6071a35b.chunk.css.map",
-    "static/css/main.e47b0713.chunk.css.map": "/sneakertopia/static/css/main.e47b0713.chunk.css.map",
-    "static/js/2.3e4affee.chunk.js.LICENSE.txt": "/sneakertopia/static/js/2.3e4affee.chunk.js.LICENSE.txt",
+    "static/css/main.fc0aee22.chunk.css.map": "/sneakertopia/static/css/main.fc0aee22.chunk.css.map",
+    "static/js/2.e06a72f3.chunk.js.LICENSE.txt": "/sneakertopia/static/js/2.e06a72f3.chunk.js.LICENSE.txt",
     "static/media/App.css": "/sneakertopia/static/media/FuturaMediumCondensedBT.f3e45345.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.60a23d5e.js",
+    "static/js/runtime-main.bedb0cc1.js",
     "static/css/2.6071a35b.chunk.css",
-    "static/js/2.3e4affee.chunk.js",
-    "static/css/main.e47b0713.chunk.css",
-    "static/js/main.18c78ae5.chunk.js"
+    "static/js/2.e06a72f3.chunk.js",
+    "static/css/main.fc0aee22.chunk.css",
+    "static/js/main.6a004bfa.chunk.js"
   ]
 }
