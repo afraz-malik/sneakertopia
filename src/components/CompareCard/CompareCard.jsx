@@ -1,8 +1,13 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 import CompareCardCss from './CompareCard.module.scss'
 const CompareCard = ({ productApi }) => {
+  const history = useHistory()
   return (
-    <div className={CompareCardCss.card}>
+    <div
+      className={CompareCardCss.card}
+      onClick={() => history.push('/details')}
+    >
       <div className={CompareCardCss.img}>
         <img alt="" src={productApi.images[0]} />
       </div>

@@ -30,7 +30,6 @@ const NavBar = () => {
       setstate(false)
     }
   }
-  console.log(state)
   // this will hide menu in mobile view
   const clickEvent = (e) => {
     var container = document.getElementById('ul')
@@ -59,7 +58,7 @@ const NavBar = () => {
         ></i>
         <ul style={{ display: state ? 'flex' : 'none' }}>
           <li>
-            <Link to="/details">CATEGORIES</Link>
+            <Link to="/">CATEGORIES</Link>
           </li>
           <li>
             <Link to="/">ABOUT</Link>

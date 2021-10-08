@@ -2,7 +2,7 @@
 
 .leftsection {
   height: 100%;
-  width: 29%;
+  // width: 29%;
   overflow: hidden;
   img {
     width: 10px !important;
@@ -10,20 +10,22 @@
   // border: 1px solid lightgrey;
   // box-shadow: 1px 1px 1px #aaaaaa;
 }
-/*.outside_leftsectioncard{
-	display: block;
-}*/
+.outside_leftsectioncard {
+  // display: block;
+  // position: fixed;
+}
 .leftsectioncard {
   display: flex;
+  justify-content: flex-start;
   // background-color: white;
   // height: 50px;
-  // align-items: center;
+  align-items: center;
   padding: 10px;
   cursor: pointer;
 }
 .arrow {
-  margin-left: auto;
-  margin-right: 10px;
+  // margin-left: auto;
+  margin-left: 20px;
   width: 10px;
   transform: rotate(-90deg);
 }
@@ -41,6 +43,14 @@
   color: rgba(93, 93, 93, 255);
   font-size: 12px;
   /*margin-left: 10px;*/
+}
+.date {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: rgba(93, 93, 93, 255);
+  font-size: 12px;
+  padding: 10px;
 }
 .first {
   // background-color: #f0ecec;
@@ -114,7 +124,6 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .leftsection {
-    width: 25%;
     margin-right: 5px;
   }
   .insidesecond form input[type='text'] {
@@ -130,7 +139,6 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .leftsection {
-    width: 25%;
     margin-right: 5px;
   }
   .insidesecond form input[type='text'] {
@@ -153,7 +161,6 @@
     margin-bottom: 20px;
   }
   .outside_leftsectioncard {
-    display: none;
   }
   .firstarrow {
     display: block;
@@ -183,7 +190,6 @@
     margin-bottom: 20px;
   }
   .outside_leftsectioncard {
-    display: none;
   }
   .firstarrow {
     display: block;

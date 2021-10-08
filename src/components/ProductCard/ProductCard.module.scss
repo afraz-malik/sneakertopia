@@ -75,62 +75,77 @@
   }
 }
 @media only screen and (max-width: 668px) {
-  .card {
-    width: 200px;
-    h2 {
-      font-size: 22px !important;
-    }
-    .img {
-      img {
-        margin: 20px 0 !important;
+  .container {
+    // width: 200px;
+    max-width: 250px;
+    // height: 250px;
+    // padding: 30px;
+    .card {
+      max-width: 250px;
+      height: 250px;
+      padding: 30px;
+
+      h1 {
+        font-size: 22px !important;
       }
-      p {
-        display: none;
+      .img {
+        img {
+          margin: 20px 0 !important;
+        }
+        p {
+          display: none;
+        }
       }
     }
-  }
-  .addToCart_price {
-    .addToCart {
-      height: 50px !important;
-      width: 60px !important;
-      img {
-        width: 30px !important;
+    .addToCart_price {
+      .addToCart {
+        height: 50px !important;
+        width: 60px !important;
+        img {
+          width: 30px !important;
+        }
       }
-    }
-    .price {
-      h3 {
-        font-size: 20px !important;
+      .price {
+        h3 {
+          font-size: 20px !important;
+        }
       }
     }
   }
 }
 
 @media only screen and (max-width: 473px) {
-  .card {
-    width: 200px;
-    h2 {
-      font-size: 22px !important;
-    }
-    .img {
-      img {
-        margin: 20px 0 !important;
+  .container {
+    // width: 200px !important;
+
+    .card {
+      // width: 200px !important;
+      height: 200px;
+      padding: 20px;
+      h1 {
+        font-size: 18px !important;
       }
-      p {
-        display: none;
-      }
-    }
-  }
-  .addToCart_price {
-    .addToCart {
-      height: 50px !important;
-      width: 60px !important;
-      img {
-        width: 30px !important;
+      .img {
+        img {
+          margin: 20px 0 !important;
+        }
+        p {
+          display: none;
+        }
       }
     }
-    .price {
-      h3 {
-        font-size: 20px !important;
+    .addToCart_price {
+      .addToCart {
+        height: 50px !important;
+        width: 60px !important;
+        img {
+          width: 30px !important;
+        }
+      }
+      .price {
+        h3 {
+          font-size: 18px !important;
+        }
       }
     }
   }

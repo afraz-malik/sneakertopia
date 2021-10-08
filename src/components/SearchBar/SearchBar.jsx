@@ -1,22 +1,10 @@
 import React from 'react'
 import { useHistory } from 'react-router'
+
 import SearchBarCss from './SearchBar.module.scss'
 
 // Dummy Categgory List
-const categoryList = [
-  'Running',
-  'Walking',
-  'Sport',
-  'American   ',
-  'Andorra',
-  'Angola',
-  'Anguilla',
-  'Antarctica',
-  'Antigua and Barbuda',
-  'Argentina',
-  'Zimbabwe',
-  'Åland Islands',
-]
+const categoryList = ['Men', 'Women', 'Children']
 
 const SearchBar = () => {
   const history = useHistory()
@@ -31,8 +19,8 @@ const SearchBar = () => {
 
   // Get value of Search and Category
   const handleSubmit = () => {
-    console.log(state)
-    history.push('/search')
+    history.push({ pathname: '/search', search: state.search })
+    setstate({ search: '', caterogy: 'All Categories' })
   }
   return (
     <div className={SearchBarCss.container}>
@@ -42,6 +30,7 @@ const SearchBar = () => {
           placeholder="Search sneaker name"
           name="search"
           onChange={handleChange}
+          value={state.search}
         />
         <img alt="" src="images/Search icon.png" />
       </div>

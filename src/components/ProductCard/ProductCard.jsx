@@ -1,8 +1,14 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 import ProductCardCss from './ProductCard.module.scss'
 const ProductCard = ({ product, detail }) => {
+  const history = useHistory()
+
   return (
-    <div className={ProductCardCss.container}>
+    <div
+      className={ProductCardCss.container}
+      onClick={() => history.push('/details')}
+    >
       <div className={ProductCardCss.card}>
         <h1>{product.title}</h1>
         <div className={ProductCardCss.img}>

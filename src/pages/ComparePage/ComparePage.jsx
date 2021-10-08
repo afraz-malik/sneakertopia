@@ -61,7 +61,9 @@ const ComparePage = () => {
   const [state, setstate] = useState(
     document.documentElement.clientWidth > 600 ? true : false
   )
+
   React.useEffect(() => {
+    window.scrollTo(0, 0)
     window.addEventListener('resize', resizeEvent)
     return () => {
       window.removeEventListener('resize', resizeEvent)

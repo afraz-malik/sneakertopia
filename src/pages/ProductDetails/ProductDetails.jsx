@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card from '../../components/Card/Card'
 import CommentsBox from '../../components/CommentsBox/CommentsBox'
 import ExploreMore from '../../components/ExploreMore/ExploreMore'
@@ -60,6 +60,9 @@ const productApi = {
 }
 
 const ProductDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className={ProductDetailsCss.container}>
       <NavBar />
