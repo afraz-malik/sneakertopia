@@ -23,3 +23,7 @@ code {
   user-select: none;
   /* -webkit-user-select: text; */
 }
+*:not(input, textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
